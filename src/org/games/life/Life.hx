@@ -59,6 +59,11 @@ class Life
         return newGrid;
     }
 
+    public function getGrid():Array<Array<Int>>
+    {
+        return grid;
+    }
+
     private function getStartCoordinate(coordinate:Int):Int
     {
         return coordinate == 0 ? coordinate : coordinate - 1;

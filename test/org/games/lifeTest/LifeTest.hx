@@ -155,4 +155,16 @@ class LifeTest
 		Assert.areEqual(Std.string(evolvedGrid), Std.string(life.evolve()));
 
 	}
+
+	@Test
+	public function itReturnsAnUptodateGrid():Void
+	{
+		newGrid = new Array();
+		newGrid[0] = [0, 1, 0];
+		newGrid[1] = [1, 1, 0];
+		newGrid[2] = [1, 0, 1];
+		life.updateGrid(newGrid);
+		Assert.areEqual(Std.string(newGrid), Std.string(life.getGrid()));
+
+	}
 }

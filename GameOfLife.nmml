@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+
+	<meta title="Game Of Life" package="org.games.life" version="1.0.0" company="None" />
+	<app path="build" file="GameOfLife" main="org.games.life.Game" />
+
+	<window width="640" height="480" if="flash" />
+	<window width="0" height="0" if="html5" />
+
+	<source path="src" />
+
+	<haxelib name="nme" />
+	<haxelib name="actuate" />
+
+	<ios binaries="armv7" />
+
+	<assets path="assets/images" rename="images" include="*" />
+
+	<haxeflag name="--dead-code-elimination" if="html5" />
+
+</project>

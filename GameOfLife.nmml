@@ -2,10 +2,10 @@
 <project>
 
 	<meta title="Game Of Life" package="org.games.life" version="1.0.0" company="None" />
-	<app path="build" file="GameOfLife" main="org.games.life.Game" />
+	<app path="build" file="GameOfLife" main="org.games.life.Main" />
 
-	<window width="640" height="480" if="flash" />
-	<window width="0" height="0" if="html5" />
+	<window width="640" height="480" if="flash" background="0x000000" />
+	<window width="640" height="480" if="html5" background="0x000000" />
 
 	<source path="src" />
 

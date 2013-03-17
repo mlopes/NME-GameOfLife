@@ -2,6 +2,7 @@
 -main TestMain
 -lib munit
 -lib hamcrest
+-lib nme
 -cp src
 
 -cp test
@@ -14,6 +15,7 @@
 -main TestMain
 -lib munit
 -lib hamcrest
+-lib nme
 -cp src
 
 -cp test
@@ -25,6 +27,7 @@
 -main TestMain
 -lib munit
 -lib hamcrest
+-lib nme
 -cp src
 
 -cp test
@@ -36,6 +39,7 @@
 -main TestMain
 -lib munit
 -lib hamcrest
+-lib nme
 -cp src
 
 -cp test

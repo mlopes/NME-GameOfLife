@@ -7,6 +7,7 @@ class Life
 
     public function new()
     {
+        grid = new Array();
     }
 
     public function getNextGenerationCellState(parentCellStatus:Int, numberOfNeighbours:Int):Int
@@ -43,6 +44,21 @@ class Life
         return neighboursCount;
     }
 
+    public function evolve():Array<Array<Int>>
+    {
+        var newGrid:Array<Array<Int>> = new Array();
+
+        for (yIndex in 0...grid.length) {
+            newGrid[yIndex] = new Array();
+            for (xIndex in 0...grid[yIndex].length) {
+                newGrid[yIndex][xIndex] = getNextGenerationCellState(
+                    grid[yIndex][xIndex],
+                    countNeighbours(xIndex, yIndex));
+            }
+        }
+        return newGrid;
+    }
+
     private function getStartCoordinate(coordinate:Int):Int
     {
         return coordinate == 0 ? coordinate : coordinate - 1;
@@ -62,4 +78,5 @@ class Life
     {
         return grid[y][x] == 1;
     }
+
 }

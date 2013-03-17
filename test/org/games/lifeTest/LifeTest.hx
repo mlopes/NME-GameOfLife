@@ -137,4 +137,22 @@ class LifeTest
 		Assert.areEqual(3, life.countNeighbours(0, 1));
 		Assert.areEqual(2, life.countNeighbours(2, 1));
 	}
+
+	@Test
+	public function itEvolves():Void
+	{
+		newGrid = new Array();
+		newGrid[0] = [0, 1, 0];
+		newGrid[1] = [1, 1, 0];
+		newGrid[2] = [1, 0, 1];
+
+		var evolvedGrid:Array<Array<Int>> = new Array();
+		evolvedGrid[0] = [1, 1, 0];
+		evolvedGrid[1] = [1, 0, 1];
+		evolvedGrid[2] = [1, 0, 0];
+
+		life.updateGrid(newGrid);
+		Assert.areEqual(Std.string(evolvedGrid), Std.string(life.evolve()));
+
+	}
 }

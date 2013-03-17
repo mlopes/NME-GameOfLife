@@ -6,6 +6,7 @@
 
 	<window width="640" height="480" if="flash" background="0x000000" />
 	<window width="640" height="480" if="html5" background="0x000000" />
+	<window width="640" height="480" if="mac" background="0x000000" />
 
 	<source path="src" />
 

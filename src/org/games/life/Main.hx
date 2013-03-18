@@ -19,6 +19,9 @@ class Main
 		#elseif flash
 		haxe.Log.trace = function(v,?pos) { flash.Lib.trace(pos.className+"#"+pos.methodName+"("+pos.lineNumber+"): "+v); }
 		#end
+
+		initialize();
+		start();
 	}
 
 
@@ -44,12 +47,5 @@ class Main
 		var game:Game = new Game();
 		Lib.current.stage.addChild(game);
 		game.start();
-	}
-
-	// Entry point
-	public static function main(): Void
-	{
-		var main:Main = new Main();
-		main.start();
 	}
 }

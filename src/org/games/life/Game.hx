@@ -4,7 +4,7 @@ import nme.Assets;
 import nme.display.Bitmap;
 import nme.display.Sprite;
 import nme.events.TimerEvent;
-import nme.utils.Timer;
+import haxe.Timer;
 import org.games.life.Life;
 
 class Game extends Sprite
@@ -24,13 +24,12 @@ class Game extends Sprite
         life = new Life();
         life.updateGrid(getRandomGeneratedGrid());
 
-        timer = new Timer(500, 0);
-        timer.addEventListener(TimerEvent.TIMER, tick);
         render(life.getGrid());
-        timer.start();
+        timer = new haxe.Timer(500);
+        timer.run = tick;
     }
 
-    private function tick(e:TimerEvent):Void
+    private function tick():Void
     {
         life.updateGrid(life.evolve());
         render(life.getGrid());
